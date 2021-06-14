@@ -1,4 +1,4 @@
 class BasketMeal < ApplicationRecord
-  belongs_to :baskets
-  belongs_to :meals
+  belongs_to :basket
+  belongs_to :meal
 end
