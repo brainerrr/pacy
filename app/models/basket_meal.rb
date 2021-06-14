@@ -1,0 +1,2 @@
+class BasketMeal < ApplicationRecord
+end
