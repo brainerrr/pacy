@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_14_143826) do
+ActiveRecord::Schema.define(version: 2021_06_14_150536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "basket_meals", force: :cascade do |t|
+    t.bigint "meal_id", null: false
+    t.bigint "basket_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["basket_id"], name: "index_basket_meals_on_basket_id"
+    t.index ["meal_id"], name: "index_basket_meals_on_meal_id"
+  end
 
   create_table "baskets", force: :cascade do |t|
     t.string "status"
@@ -27,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_06_14_143826) do
 
   create_table "meals", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.float "price"
     t.text "description"
     t.bigint "restaurant_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -65,6 +74,8 @@ ActiveRecord::Schema.define(version: 2021_06_14_143826) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "basket_meals", "baskets"
+  add_foreign_key "basket_meals", "meals"
   add_foreign_key "baskets", "tables"
   add_foreign_key "baskets", "users"
   add_foreign_key "meals", "restaurants"
