@@ -18,7 +18,7 @@ Table.create!(number: 2, restaurant: Restaurant.first)
 Table.create!(number: 3, restaurant_id: Restaurant.first.id)
 
 p "Creating Baskets..."
-Basket.create!(user_id: User.first.id, table_id: Table.first.id)
+Basket.create!(user_id: User.first.id, table_id: Table.first.id, status: "Confirmed")
 
 p "Creating Meals..."
 Meal.create!(name: "Steak", price: 5.80, description: "Large piece of meat...", restaurant_id: Restaurant.first.id)
