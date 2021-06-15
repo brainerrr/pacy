@@ -1,6 +1,7 @@
 <h1>Restaurant Menu</h1>
 <%  @meals.each do |meal|%>
  <%= meal.name %> - <%= meal.price %> -
- <%= meal.description %> <%= link_to "+Add", table_baskets_path(table_id: @table_id), method: :post %>
+ <%= meal.description %> <%= link_to "+Add", basket_basket_meals_path(@current_basket, meal_id: meal), method: :post %>
 <% end  %>
+
 

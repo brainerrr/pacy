@@ -6,4 +6,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   has_many :baskets, dependent: :destroy
+
+  def find_or_create_basket_for(table)
+    (baskets.find_by status: "Pending", table: table) || baskets.create(table: table)
+  end
 end
