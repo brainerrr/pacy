@@ -9,6 +9,13 @@ class BasketsController < ApplicationController
     end
   end
 
+  def show
+    @basket = Basket.find(params[:id])
+  end
+
+  def payment_confirmation
+  end
+
   private
 
   def basket_params
