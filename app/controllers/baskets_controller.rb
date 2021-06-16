@@ -13,6 +13,9 @@ class BasketsController < ApplicationController
     @basket = Basket.find(params[:id])
   end
 
+  def payment_confirmation
+  end
+
   private
 
   def basket_params

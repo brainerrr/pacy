@@ -1,10 +1,12 @@
 <h1>Your Basket</h1>
 
 <ul>
-<% @basket.meals.each do |meal|%>
-<li><%= meal.name %> - <%= meal.description %> - <%= meal.price %></li>
-<% end %>
+  <% @basket.meals.each do |meal|%>
+    <li><%= meal.name %> - <%= meal.description %> - <%= meal.price %></li>
+  <% end %>
 </ul>
+
+<%= link_to 'Pay', payment_confirmation_basket_path(@basket) %>
 
 
 
