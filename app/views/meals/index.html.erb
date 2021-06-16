@@ -1,27 +1,14 @@
 <div class="meals">
-<h1 style="font-size: 50px; text-align: center; color: white;">Restaurant</h1>
-<h2 style="font-size: 45px; text-align: center; color: white;">Menu</h2>
-
+  <h1 style="font-size: 50px; text-align: center; color: white;">Restaurant</h1>
+  <h2 style="font-size: 45px; text-align: center; color: white;">Menu</h2>
   <div class="cards">
     <%  @meals.each do |meal|%>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <h4><%= meal.name %></h4>
-          <h6><%= meal.description %></h6>
-          <p><%= meal.price %>€</p>
-          <div class="add-btn">
-          <%= link_to "+", basket_basket_meals_path(@current_basket, meal_id: meal), method: :post %>
-          </div>
-        </div>
-      </div>
+      <%= render("meal_card",{meal: meal, basket: @current_basket}) %>
     <% end  %>
-  <div class="basket-footer">
-    <p><%= link_to "Go to Basket", basket_path(@current_basket) %></p>
-    <br>
-    <br>
+    <div class="basket-footer">
+      <p><%= link_to "Go to Basket",basket_path(@current_basket) %></p>
+      <br>
+      <br>
+    </div>
   </div>
-  </div>
-
-
 </div>
