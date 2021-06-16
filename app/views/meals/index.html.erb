@@ -1,7 +1,21 @@
-<h1>Restaurant Menu</h1>
-<%  @meals.each do |meal|%>
- <%= meal.name %> - <%= meal.price %> -
- <%= meal.description %> <%= link_to "+Add", basket_basket_meals_path(@current_basket, meal_id: meal), method: :post %>
-<% end  %>
+<div class="meals">
+<h1 style="font-size: 50px; text-align: center; color: white;">Restaurant</h1>
+<h2 style="font-size: 45px; text-align: center; color: white;">Menu</h2>
 
+  <div class="cards">
+    <%  @meals.each do |meal|%>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h4><%= meal.name %></h4>
+          <h6><%= meal.description %></h6>
+          <p><%= meal.price %>€</p>
+          <div class="add-btn">
+          <%= link_to "+", basket_basket_meals_path(@current_basket, meal_id: meal), method: :post %>
+          </div>
+        </div>
+      </div>
+    <% end  %>
+  </div>
 
+</div>
