@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :baskets, only: [:show, :update] do
     resources :basket_meals, only: [:create]
   end
+
+  get "stylepage", to: "pages#stylepage"
 end
