@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background: linear-gradient(198.22deg, #EF9B4A 9.67%, rgba(239, 155, 74, 0.86) 36.55%, rgba(239, 114, 74, 0.86) 60.48%, #EF7149 90.28%, #EF724A 90.29%);
+}
+
+
+.wrapper{
+  display: grid inline-block;
+  grid-gap: 1rem;
+  justify-content: center;
+  text-align: center !important;
+  align-items: center;
+  padding-top: 270px;
+
+
+  h1{
+    padding-bottom: 50px;
+    color: white;
+    font-size: 75px;
+  }
+
+}
+
+
+.all-btn {
+  color: white;
+  background: #9B9FFF;
+  border: 1px solid;
+  border-color: #8B8FE5;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}

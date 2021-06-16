@@ -1,2 +1,6 @@
-<h1>Pacy</h1>
-<%= link_to "Restaurant Menu", restaurant_meals_path(Restaurant.first, table_id: Table.first.id) %>
+<div class='wrapper col-sm'>
+  <h1 ><strong><i>Pacy</i></strong></h1>
+  <div class='button-wrapper'>
+    <%= link_to "Restaurant Menu", restaurant_meals_path(Restaurant.first, table_id: Table.first.id), class: "all-btn" %>
+  </div>
+</div>
