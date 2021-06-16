@@ -1,8 +1,12 @@
 <div class="meals">
-<h1 style="font-size: 50px; text-align: center; color: white;">Restaurant</h1>
-<h2 style="font-size: 45px; text-align: center; color: white;">Menu</h2>
+   <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
   <div class="cards">
+    <h1 class="text-center" style="font-size: 50px; color: white;">Restaurant</h1>
     <%  @meals.each do |meal|%>
       <div class="card-product">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
@@ -16,12 +20,10 @@
         </div>
       </div>
     <% end  %>
-  <div class="basket-footer">
-    <p><%= link_to "Go to Basket", basket_path(@current_basket) %></p>
-    <br>
-    <br>
+    <div class="basket-footer">
+      <p><%= link_to "Go to Basket", basket_path(@current_basket) %></p>
+      <br>
+      <br>
+    </div>
   </div>
-  </div>
-
-
 </div>
