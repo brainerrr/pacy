@@ -1,12 +1,24 @@
-<h1>Your Basket</h1>
-
-<ul>
-  <% @basket.meals.each do |meal|%>
-    <li><%= meal.name %> - <%= meal.description %> - <%= meal.price %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Pay', payment_confirmation_basket_path(@basket) %>
+<div class="basket">
 
 
+  <div class="cards-basket">
+    <div class="back">
+      <h1 style="margin-top=">Your Basket</h1>
+      <% @basket.meals.each do |meal| %>
+        <div class="card-products">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-products-infos">
+            <h4><%= meal.name %></h4>
+            <h6><%= meal.description %></h6>
+            <p><%= meal.price %>€</p>
+          </div>
+        </div>
+      <% end  %>
+      <%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
+      <div class="cancel"><a>cancel order</a></div>
+      </div>
+    </div>
 
+
+
+</div>
