@@ -1,0 +1,10 @@
+<h1>Your Basket</h1>
+
+<ul>
+<% @basket.meals.each do |meal|%>
+<li><%= meal.name %> - <%= meal.description %> - <%= meal.price %></li>
+<% end %>
+</ul>
+
+
+

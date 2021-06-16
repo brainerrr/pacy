@@ -3,5 +3,9 @@
  <%= meal.name %> - <%= meal.price %> -
  <%= meal.description %> <%= link_to "+Add", basket_basket_meals_path(@current_basket, meal_id: meal), method: :post %>
 <% end  %>
+<br>
+<br>
+<p><%= link_to "Basket", basket_path(@current_basket) %></p>
+
 
 
