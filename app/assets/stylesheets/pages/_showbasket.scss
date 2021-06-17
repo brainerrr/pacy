@@ -11,10 +11,10 @@
 
 .basket h1 {
     text-align: center;
-    color: black;
-    background: #F4EDE1;
+    color: white;
+    background: #9B9FFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+    border-radius: 10px;
     opacity: 0.9;
     padding-right: 10px;
     padding-left: 10px;
@@ -33,6 +33,10 @@
   margin-bottom: 5px;
   margin-right: 20px;
   margin-left: 20px;
+  position: fixed;
+  bottom: 20px;
+  padding-left: 145px;
+  padding-right: 145px;
 }
 
 .back {
@@ -101,4 +105,9 @@
   color: #F0A956;
   font-size: 10px;
   margin: 0px;
+}
+
+.backbtn {
+  color: white;
+  font-size: 30px;
 }
