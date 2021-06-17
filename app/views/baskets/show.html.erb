@@ -12,7 +12,7 @@
             <h4> <%= basket_meal.quantity %>x
               <%= basket_meal.meal.name %></h4>
             <h6><%= basket_meal.meal.description %></h6>
-            <p><%= basket_meal.meal.price %>€</p>
+            <p><%= "%.2f" % (basket_meal.meal.price / 100.00) %>0€</p>
           </div>
         </div>
       <% end  %>
