@@ -5,14 +5,18 @@
     <br>
     <br>
   <div class="cards">
-    <h1 class="text-center" style="font-size: 50px; color: white;">Restaurant</h1>
+    <h1 class="text-center" style="font-size: 50px; color: white;"><%= @restaurant.name %></h1>
     <%  @meals.each do |meal|%>
       <%= render("meal_card",{meal: meal, basket: @current_basket}) %>
     <% end  %>
-    <div class="basket-footer">
-      <p><%= link_to "Go to Basket", basket_path(@current_basket) %></p>
+    <br>
+    <br>
+    <br>
+      <p><%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: white; text-align: center;' do %>
+        <i class="fas fa-shopping-cart"></i>
+        <%end%>
+        </p>
       <br>
       <br>
-    </div>
   </div>
 </div>

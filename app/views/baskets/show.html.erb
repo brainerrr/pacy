@@ -1,3 +1,4 @@
+<button class="btn backbtn"><%= link_to "<", restaurant_meals_path(restaurant_id:@basket.table.restaurant_id, table_id: @basket.table.id)%></button>
 <div class="basket">
 
 
@@ -6,7 +7,7 @@
       <h1 style="margin-top=">Your Basket</h1>
       <% @basket.basket_meals.each do |basket_meal| %>
         <div class="card-products">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
           <div class="card-products-infos">
             <h4> <%= basket_meal.quantity %>
               <%= basket_meal.meal.name %></h4>
@@ -16,7 +17,6 @@
         </div>
       <% end  %>
       <%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
-      <div class="cancel"><a>cancel order</a></div>
       </div>
     </div>
 </div>

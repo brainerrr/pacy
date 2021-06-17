@@ -5,9 +5,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 20px;
+  margin-left: 18px;
+  margin-top: 20px;
   border-radius: 24px;
-  padding: 20px;
+  width: 83vw;
+  height: 13vh;
 }
 
 .card-meal-img {
@@ -18,43 +20,24 @@
   height: 100%;
   width: 120px;
   object-fit: cover;
+  margin-left: 0px;
 }
 
 .card-product h4 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
 }
 
-.card-product h6 {
-  color: #F0A956;
-  font-size: 10px;
-  margin: 0px;
-}
-
-
 .card-product .card-product-infos {
-  padding: 16px;
-}
-
-.card-product .add-btn {
-  background-color: #EC7D5A;
   text-align: center;
-  border-radius: 5px;
-  margin-left: 150px;
-  color: white;
-  margin-bottom: 20px;
-
-  a {
-     color: white;
-     text-decoration: none;
-  }
+  padding-left: 5px;
 }
 
 .cards {
@@ -64,17 +47,45 @@
   right: -0.27%;
   min-height: 100%;
   background: linear-gradient(198.22deg, #EF9B4A 9.67%, #EF9B4A 36.55%, rgba(239, 114, 74, 0.86) 60.48%, #EF7149 90.28%, #EF724A 90.29%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  h1 {
+    padding-top: 20px;
+  }
 }
 
 .meals {
-  background: url(http://www.mandysam.com/img/random.jpg);
+  background: url(https://s03.s3c.es/imag/_v0/770x420/a/0/9/taj-mahal-2.jpg);
   object-fit: center;
   background-size: contain;
   width: 100vw;
   height: 281px;
 }
 
-.basket-footer {
-  text-align: center;
+.btn-basket {
+  background: #9B9FFF;
+  border: 1px solid;
+  border-color: #8B8FE5;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  margin-left: 125px;
+  margin-right: 115px;
+  position: fixed;
+  bottom: 20px;
+}
 
+.all-btn {
+  background: #9B9FFF;
+  border: 1px solid;
+  border-color: #8B8FE5;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+}
+
+.btn .add-btn {
+  margin-left: 20px;
 }
