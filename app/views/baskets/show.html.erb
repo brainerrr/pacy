@@ -1,22 +1,22 @@
 <button class="btn backbtn"><%= link_to "<", restaurant_meals_path(restaurant_id:@basket.table.restaurant_id, table_id: @basket.table.id)%></button>
 <div class="basket">
 
-
-  <div class="cards-basket">
-    <div class="back">
-      <h1 style="margin-top=">Your Basket</h1>
-      <% @basket.basket_meals.each do |basket_meal| %>
-        <div class="card-products">
-          <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
-          <div class="card-products-infos">
-            <h4> <%= basket_meal.quantity %>x
-              <%= basket_meal.meal.name %></h4>
-            <h6><%= basket_meal.meal.description %></h6>
-            <p><%= basket_meal.meal.price %>€</p>
+  <div class="newscroll">
+    <div class="cards-basket">
+      <div class="header"><h1>Your Basket</h1></div>
+      <div class="back" style="overflow: scroll">
+        <% @basket.basket_meals.each do |basket_meal| %>
+          <div class="card-products">
+            <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
+            <div class="card-products-infos">
+              <h4> <%= basket_meal.quantity %>x
+                <%= basket_meal.meal.name %></h4>
+              <p><%= basket_meal.meal.price %>€</p>
+            </div>
           </div>
+        <% end  %>
         </div>
-      <% end  %>
-      <%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
       </div>
     </div>
+<%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
 </div>
