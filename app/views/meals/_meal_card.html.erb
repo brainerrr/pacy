@@ -5,7 +5,7 @@
     </div>
     <div class="card-product-infos d-flex flex-column justify-content-between w-100 h-100 px-2 py-3 text-left">
       <h4 class="mb-0"><%= meal.name %></h4>
-      <p class="mb-0"><%= meal.price %>€</p>
+      <p class="mb-0"><%= "%.2f" % (meal.price / 100.00) %>€</p>
     </div>
   </div>
 </button>
@@ -23,7 +23,7 @@
       <div class="modal-body">
         <h4><%= meal.name %></h4>
         <h6><%= meal.description %></h6>
-        <p><%= meal.price %>€</p>
+        <p><%= "%.2f" % (meal.price / 100.00) %>€</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn all-btn " data-dismiss="modal">Close</button>
