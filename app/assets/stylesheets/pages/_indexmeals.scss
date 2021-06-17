@@ -90,8 +90,6 @@
   margin-left: 20px;
 }
 
-.backbtn {
-  a {
-    color:white;
-  }
+.btn:focus, .btn.focus {
+  box-shadow: none;
 }
