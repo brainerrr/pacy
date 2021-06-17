@@ -4,13 +4,14 @@
   <div class="cards-basket">
     <div class="back">
       <h1 style="margin-top=">Your Basket</h1>
-      <% @basket.meals.each do |meal| %>
+      <% @basket.basket_meals.each do |basket_meal| %>
         <div class="card-products">
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-products-infos">
-            <h4><%= meal.name %></h4>
-            <h6><%= meal.description %></h6>
-            <p><%= meal.price %>€</p>
+            <h4> <%= basket_meal.quantity %>
+              <%= basket_meal.meal.name %></h4>
+            <h6><%= basket_meal.meal.description %></h6>
+            <p><%= basket_meal.meal.price %>€</p>
           </div>
         </div>
       <% end  %>
@@ -18,7 +19,4 @@
       <div class="cancel"><a>cancel order</a></div>
       </div>
     </div>
-
-
-
 </div>
