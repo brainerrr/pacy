@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   margin-left: 18px;
-  margin-top: 20px;
+  margin-top: 15px;
   border-radius: 24px;
   width: 83vw;
   height: 13vh;
@@ -36,8 +36,8 @@
 }
 
 .card-product .card-product-infos {
-  text-align: center;
-  padding-left: 5px;
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
 .cards {
@@ -88,4 +88,10 @@
 
 .btn .add-btn {
   margin-left: 20px;
+}
+
+.backbtn {
+  a {
+    color:white;
+  }
 }
