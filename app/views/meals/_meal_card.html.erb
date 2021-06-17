@@ -5,7 +5,6 @@
     </div>
     <div class="card-product-infos">
       <h4><%= meal.name %></h4>
-      <h6><%= meal.description %></h6>
       <p><%= meal.price %>€</p>
     </div>
   </div>
@@ -26,7 +25,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn all-btn " data-dismiss="modal">Close</button>
-        <button type="button" class="btn all-btn"> <%= link_to "+Add", basket_basket_meals_path(basket, meal_id: meal), method: :post %></button>
+        <button type="button" class="btn all-btn"> <%= link_to "+", basket_basket_meals_path(basket, meal_id: meal), method: :post, style:"color: white"%></button>
       </div>
     </div>
   </div>
