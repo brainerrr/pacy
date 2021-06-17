@@ -4,20 +4,19 @@
 
   <div class="cards-basket">
     <div class="back">
-      <h1 style="margin-top=">Basket</h1>
-      <% @basket.meals.each do |meal| %>
+      <h1 style="margin-top=">Your Basket</h1>
+      <% @basket.basket_meals.each do |basket_meal| %>
         <div class="card-products">
-          <%= cl_image_tag meal.photo.key, class: "card-meal-img" %>
+          <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
           <div class="card-products-infos">
-            <h4><%= meal.name %></h4>
-            <p><%= meal.price %>€</p>
+            <h4> <%= basket_meal.quantity %>
+              <%= basket_meal.meal.name %></h4>
+            <h6><%= basket_meal.meal.description %></h6>
+            <p><%= basket_meal.meal.price %>€</p>
           </div>
         </div>
       <% end  %>
       <%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
       </div>
     </div>
-
-
-
 </div>
