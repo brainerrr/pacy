@@ -6,14 +6,14 @@
     <br>
     <br>
   <div class="cards">
-    <h1 class="text-center" style="font-size: 50px; color: #F0EFF3;"><%= @restaurant.name %></h1>
+    <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;"><%= @restaurant.name %></h1>
     <%  @meals.each do |meal|%>
       <%= render("meal_card",{meal: meal, basket: @current_basket}) %>
     <% end  %>
     <br>
     <br>
     <br>
-      <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #F0EFF3; text-align: center;' do %>
+      <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center;' do %>
           <% if @meals.count > 0 %>
             <div class="product-number"><%= @meals.count %></div>
           <% end %>
