@@ -1,3 +1,4 @@
+<% @totalprice = 0 %>
 <button class="btn backbtn"><%= link_to "<", restaurant_meals_path(restaurant_id:@basket.table.restaurant_id, table_id: @basket.table.id)%></button>
 <div class="basket">
   
@@ -6,6 +7,7 @@
       <div class="header"><h1>Your Basket</h1></div>
       <div class="back" style="overflow: scroll">
         <% @basket.basket_meals.each do |basket_meal| %>
+          <% @totalprice += (basket_meal.meal.price * basket_meal.quantity)%>
           <div class="card-products">
             <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
             <div class="card-products-infos">
@@ -15,6 +17,7 @@
             </div>
           </div>
         <% end  %>
+        <h3>Total price : <%=  "%.2f" % (@totalprice / 100.00) %>€</h3>
         </div>
       </div>
     </div>
