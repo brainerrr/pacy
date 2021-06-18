@@ -18,6 +18,7 @@ class BasketsController < ApplicationController
 
   private
 
+
   def basket_params
     params.require(:basket).permit(:status)
   end
