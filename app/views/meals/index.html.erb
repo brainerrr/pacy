@@ -38,8 +38,8 @@
     <br>
     <br>
       <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center;' do %>
-          <% if @meals.count > 0 %>
-            <div class="product-number"><%= @meals.count %></div>
+          <% if @current_basket.basket_meals.count > 0 %>
+            <div class="product-number"><%= @current_basket.basket_meals.count %></div>
           <% end %>
           <i class="fas fa-shopping-cart"></i>
         <%end%>
