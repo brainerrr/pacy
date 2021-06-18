@@ -1,14 +1,38 @@
 <div class="meals">
 <button class="btn backbtn"><%= link_to "<", root_path()%></button>
+
+  <%= link_to "Log out",  destroy_user_session_path, method: :delete %>
    <br>
+
+    <br>
+
     <br>
     <br>
     <br>
     <br>
   <div class="cards">
+
     <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;"><%= @restaurant.name %></h1>
-    <%  @meals.each do |meal|%>
-      <%= render("meal_card",{meal: meal, basket: @current_basket}) %>
+    <h2>Most ordered</h2>
+    <%  @favourites.each do |favourite|%>
+      <%= render("meal_card",{meal: favourite, basket: @current_basket}) %>
+      <% end  %>
+    <h2>Starters</h2>
+    <%  @starters.each do |starter|%>
+      <%= render("meal_card",{meal: starter, basket: @current_basket}) %>
+      <% end  %>
+    <h2>Mains</h2>
+     <%  @mains.each do |main|%>
+      <%= render("meal_card",{meal: main, basket: @current_basket}) %>
+    <% end  %>
+    <h2>Desserts</h2>
+      <%  @desserts.each do |dessert|%>
+      <%= render("meal_card",{meal: dessert, basket: @current_basket}) %>
+    <% end  %>
+    <h2>Beverages</h2>
+      <%  @beverages.each do |beverage|%>
+      <%= render("meal_card",{meal: beverage, basket: @current_basket}) %>
+
     <% end  %>
     <br>
     <br>
