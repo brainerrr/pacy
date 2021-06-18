@@ -1,7 +1,5 @@
 <div class="meals">
 <button class="btn backbtn"><%= link_to "<", root_path()%></button>
-
-  <%= link_to "Log out",  destroy_user_session_path, method: :delete %>
    <br>
 
     <br>
@@ -12,7 +10,7 @@
     <br>
   <div class="cards">
 
-    <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;"><%= @restaurant.name %></h1>
+    <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;">The Taj</h1>
     <h2>Most ordered</h2>
     <%  @favourites.each do |favourite|%>
       <%= render("meal_card",{meal: favourite, basket: @current_basket}) %>
