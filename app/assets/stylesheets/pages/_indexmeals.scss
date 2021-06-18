@@ -1,14 +1,14 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: white;
+  background: #fdf5ec;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-left: 18px;
+  margin-left: 15px;
   margin-top: 15px;
-  border-radius: 24px;
-  width: 83vw;
+  border-radius: 34px;
+  width: 82vw;
   height: 13vh;
 }
 
@@ -27,21 +27,23 @@
   font-size: 17px;
   font-weight: bold;
   margin-top: 10px;
+  color: #29262B;
 }
 
 .card-product p {
   font-size: 15px;
   line-height: 1.4;
   opacity: .7;
+  color: #29262B;
 }
 
 .card-product .card-product-infos {
-  padding-left: 15px;
+  padding-left: 20px;
   padding-top: 10px;
 }
 
 .cards {
-  border-radius: 44px 44px 0px 0px;
+  border-radius: 34px 34px 0px 0px;
   position: absolute;
   left: 0%;
   right: -0.27%;
@@ -98,4 +100,9 @@
 
 .btn:focus, .btn.focus {
   box-shadow: none;
+}
+
+.product-number {
+  border: 1px solid;
+  border-radius: 40%;
 }

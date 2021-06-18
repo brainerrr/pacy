@@ -14,7 +14,7 @@ class BasketMealsController < ApplicationController
       @basket_meal.basket = @basket
       @basket_meal.save
     end
-    redirect_to restaurant_meals_path(@meal.restaurant, table_id: @basket.table ), notice: "Item added"
+    redirect_to restaurant_meals_path(@meal.restaurant, table_id: @basket.table );
   end
 
   private

@@ -11,7 +11,8 @@
     <br>
     <br>
   <div class="cards">
-    <h1 class="text-center" style="font-size: 50px; color: white;"><%= @restaurant.name %></h1>
+
+    <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;"><%= @restaurant.name %></h1>
     <h2>Most ordered</h2>
     <%  @favourites.each do |favourite|%>
       <%= render("meal_card",{meal: favourite, basket: @current_basket}) %>
@@ -31,14 +32,17 @@
     <h2>Beverages</h2>
       <%  @beverages.each do |beverage|%>
       <%= render("meal_card",{meal: beverage, basket: @current_basket}) %>
+
     <% end  %>
     <br>
     <br>
     <br>
-      <p><%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: white; text-align: center;' do %>
-        <i class="fas fa-shopping-cart"></i>
+      <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center;' do %>
+          <% if @meals.count > 0 %>
+            <div class="product-number"><%= @meals.count %></div>
+          <% end %>
+          <i class="fas fa-shopping-cart"></i>
         <%end%>
-        </p>
       <br>
       <br>
   </div>
