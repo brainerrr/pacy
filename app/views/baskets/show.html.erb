@@ -16,9 +16,19 @@
             </div>
           </div>
         <% end  %>
-        <h3>Total price : <%=  "%.2f" % (@totalprice / 100.00) %>€</h3>
         </div>
       </div>
     </div>
-<%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
+
+    <div class="payment-button" style="
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;">
+
+      <%= link_to 'Pay', payment_confirmation_basket_path(@basket), class:"payment" %>
+    </div>
+
+    <div class="price">
+        <h3>Total price : <%=  "%.2f" % (@totalprice / 100.00) %>€</h3>
+    </div>
 </div>
