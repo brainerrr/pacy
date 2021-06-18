@@ -55,10 +55,14 @@
     padding-top: 20px;
   }
   h2 {
-    color: white;
+    color: #fdf5ec;
     margin-top: 30px;
-    margin-left: 35px;
     font-size: 25px;
+    margin-left: 30px;
+    border-radius: 15px;
+    background-color: #BA8D7F;
+    width: 82vw;
+    text-align: center;
   }
 }
 
@@ -95,7 +99,8 @@
 }
 
 .btn .add-btn {
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 .btn:focus, .btn.focus {

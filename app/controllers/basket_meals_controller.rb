@@ -17,6 +17,14 @@ class BasketMealsController < ApplicationController
     redirect_to restaurant_meals_path(@meal.restaurant, table_id: @basket.table );
   end
 
+  def destroy
+    @meal = Meal.find(params[:meal_id])
+    @basket = Basket.find(params[:basket_id])
+    @basket_meal = BasketMeal.find_by(meal_id: @meal.id, basket_id: @basket.id)
+    @basket_meal.destroy
+    redirect_to basket_path(@basket)
+  end
+
   private
 
   def basket_meal_params

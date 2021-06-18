@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     member do
       get :payment_confirmation
     end
-    resources :basket_meals, only: [:create]
+    resources :basket_meals, only: [:create, :destroy]
   end
 
   get "stylepage", to: "pages#stylepage"

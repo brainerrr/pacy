@@ -1,0 +1,68 @@
+
+.my-container {
+  margin: 0px auto;
+  width: 90vw;
+}
+
+.header-login{
+  text-align: center;
+  color: white;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+
+.all-btn-login {
+  color: white;
+  background: #9B9FFF;
+  border: 1px solid;
+  border-color: #8B8FE5;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.signup-btn {
+  color: white;
+  background: #9B9FFF;
+  border: 1px solid;
+  border-color: #8B8FE5;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.forget-btn {
+  color: white;
+  background: #9B9FFF;
+  border: 1px solid;
+  border-color: #8B8FE5;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.linkstyle {
+  margin-top: 20px;
+  text-align: center;
+  width: 90vw;
+}
