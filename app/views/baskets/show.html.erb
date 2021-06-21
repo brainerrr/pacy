@@ -14,9 +14,14 @@
             <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
             <div class="card-products-infos">
               <h4> <%= basket_meal.quantity %>x
-                <%= basket_meal.meal.name %></h4>
+                <%= basket_meal.meal.name %>
+              </h4>
               <p><%= "%.2f" % (basket_meal.meal.price / 100.00) %>€</p>
-                <%#= link_to "-", basket_basket_meal_path(@basket,meal_id: basket_meal.meal.id), method: :delete, style:"color:#9B9FFF"%>
+              <% if basket_meal.quantity > 1 %>
+                <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :patch, style:"color:#fdf5ec"%></button>
+              <% else %>
+                <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
+              <% end %>
             </div>
           </div>
         <% end  %>
