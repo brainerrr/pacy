@@ -27,10 +27,11 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { codeReader } from 'basic-qr-code-reader';
+import { basicQrCodeReader } from '../plugins/basic_qr_code_reader';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  basicQrCodeReader()
 });
 
