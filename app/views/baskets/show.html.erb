@@ -3,7 +3,10 @@
 <div class="basket">
   <div class="newscroll">
     <div class="cards-basket">
-      <div class="header"><h1>Your Basket</h1></div>
+      <div class="header">
+        <h1>Your Basket</h1>
+        <h4> Table Number <%= @basket.table.number %></h4>
+      </div>
       <div class="back" style="overflow: scroll">
         <% @basket.basket_meals.each do |basket_meal| %>
           <% @totalprice += (basket_meal.meal.price * basket_meal.quantity)%>
