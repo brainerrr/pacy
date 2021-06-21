@@ -14,7 +14,10 @@ class BasketsController < ApplicationController
   end
 
   def payment_confirmation
+    @basket = Basket.find(params[:id])
+    @basket.destroy
   end
+
 
   private
 
