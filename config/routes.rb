@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   end
   resources :basket_meals, only: [:destroy, :update]
   get "stylepage", to: "pages#stylepage"
+  get 'basic-qr-code-reader', to: 'basicqrcodes#index'
 end
