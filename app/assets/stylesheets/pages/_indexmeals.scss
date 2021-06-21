@@ -13,6 +13,7 @@
   width: 82vw;
   height: 13vh;
   font-family: 'Quicksand', sans-serif;
+  transform: translate(6px, -8px);
 }
 
 .card-meal-img {
@@ -71,6 +72,7 @@
     width: 82vw;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+    transform: translate(6px, -8px);
   }
 }
 
@@ -128,11 +130,12 @@
 
 .btn-minus {
   text-decoration: none;
-  background: #9B9FFF;
   border: 1px solid;
-  border-color: #8B8FE5;
+  border-color: #F4752D;
   padding: 0px 8px;
   border-radius: 10px;
   font-size: 15px;
   transition: opacity 0.3s ease;
+  background: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
+  transform: translate(100px, -5px);
 }

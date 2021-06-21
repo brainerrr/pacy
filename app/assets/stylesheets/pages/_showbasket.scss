@@ -101,7 +101,8 @@
   margin-top: 5px;
   margin-right: 20px;
   margin-left: 20px;
-  color:linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);
+  color: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
+  padding: 8px 24px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: 'Quicksand', sans-serif;
 }
@@ -158,4 +159,14 @@ font-family: 'Quicksand', sans-serif;
 
 .basket {
   margin: 0px;
+}
+
+.btn-minus {
+  color: #fdf5ec;
+  background-color: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
+  padding: 8px 24px;
+}
+
+.newscroll {
+  margin-top: 10px;
 }
