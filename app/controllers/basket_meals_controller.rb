@@ -25,6 +25,13 @@ class BasketMealsController < ApplicationController
     redirect_to basket_path(@basket)
   end
 
+  def update
+    @basket_meal = BasketMeal.find(params[:id])
+    @basket_meal.quantity = @basket_meal.quantity - 1
+    @basket_meal.save
+    redirect_to basket_path(@basket_meal.basket)
+  end
+
   private
 
   def basket_meal_params
