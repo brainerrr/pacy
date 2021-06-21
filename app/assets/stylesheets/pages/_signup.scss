@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 .my-container {
   margin: 0px auto;
   width: 90vw;
@@ -8,20 +10,23 @@
   color: white;
   margin-top: 45px;
   margin-bottom: 20px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 
 .all-btn-signup {
   color: white;
-  background: #9B9FFF;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid;
-  border-color: #8B8FE5;
+   border-color: #8B8FE5;
   padding: 8px 24px;
   border-radius: 10px;
   font-weight: lighter;
   transition: opacity 0.3s ease;
   text-align: center;
   margin-top: 10px;
+  font-family: 'Quicksand', sans-serif;
 
 }
 
@@ -29,11 +34,13 @@ label {
     display: inline-block;
     margin-bottom: 0.5rem;
     color: white;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .login-btn {
   color: white;
-  background: #9B9FFF;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid;
   border-color: #8B8FE5;
   padding: 8px 24px;
@@ -42,10 +49,12 @@ label {
   transition: opacity 0.3s ease;
   text-align: center;
   margin-top: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .linkstyle {
   margin-top: 20px;
   text-align: center;
   width: 90vw;
+  font-family: 'Quicksand', sans-serif;
 }

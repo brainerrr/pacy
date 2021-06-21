@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .all-btn {
   color: white;
-  background: #9B9FFF;
+    background: linear-gradient(180.82deg, #9498EF 24.73%, #B379E0 99.29%);
   border: 1px solid;
   border-color: #8B8FE5;
   padding: 8px 24px;
@@ -8,6 +9,7 @@
   font-weight: lighter;
   transition: opacity 0.3s ease;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .stylesheet{

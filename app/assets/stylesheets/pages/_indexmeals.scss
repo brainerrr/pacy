@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -10,6 +12,7 @@
   border-radius: 34px;
   width: 82vw;
   height: 13vh;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .card-meal-img {
@@ -27,19 +30,22 @@
   font-size: 17px;
   font-weight: bold;
   margin-top: 10px;
-  color: #29262B;
+  color:  #0d0905;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .card-product p {
   font-size: 15px;
   line-height: 1.4;
   opacity: .7;
-  color: #29262B;
+  color: #aea7a1;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .card-product .card-product-infos {
   padding-left: 20px;
   padding-top: 10px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .cards {
@@ -53,6 +59,7 @@
   background-attachment: fixed;
   h1 {
     padding-top: 20px;
+    font-family: 'Quicksand', sans-serif;
   }
   h2 {
     color: #fdf5ec;
@@ -60,9 +67,10 @@
     font-size: 25px;
     margin-left: 30px;
     border-radius: 15px;
-    background-color: #BA8D7F;
+    background-color: #C05D3D;
     width: 82vw;
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
   }
 }
 
@@ -75,7 +83,8 @@
 }
 
 .btn-basket {
-  background: #9B9FFF;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, #B379E0 99.29%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid;
   border-color: #8B8FE5;
   padding: 10px 50px;
@@ -86,21 +95,25 @@
   margin-right: 115px;
   position: fixed;
   bottom: 20px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .all-btn {
-  background: #9B9FFF;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, #B379E0 99.29%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid;
   border-color: #8B8FE5;
   padding: 10px 50px;
   border-radius: 10px;
   font-weight: lighter;
   transition: opacity 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .btn .add-btn {
   margin-left: 30px;
   margin-top: 5px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .btn:focus, .btn.focus {
@@ -110,6 +123,7 @@
 .product-number {
   border: 1px solid;
   border-radius: 40%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .btn-minus {

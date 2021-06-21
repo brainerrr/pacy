@@ -9,6 +9,8 @@ body {
   background: linear-gradient(198.22deg, #EF9B4A 9.67%, rgba(239, 155, 74, 0.86) 36.55%, rgba(239, 114, 74, 0.86) 60.48%, #EF7149 90.28%, #EF724A 90.29%);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
 }
 
 
@@ -30,9 +32,10 @@ body {
 }
 
 
-.all-btn {
+.all-btn-home {
   color: #fdf5ec;
-  background: #9B9FFF;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, #B379E0 99.29%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid;
   border-color: #8B8FE5;
   padding: 8px 24px;
@@ -40,6 +43,7 @@ body {
   font-weight: lighter;
   transition: opacity 0.3s ease;
   text-align: center;
+  text-decoration: none;
 }
 
 .all-btn:hover {
