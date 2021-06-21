@@ -17,7 +17,7 @@
               <% if basket_meal.quantity > 1 %>
                 <%= link_to "-", basket_meal_path(basket_meal.id), method: :patch, style:"color:#9B9FFF"%>
               <% else %>
-                <%= link_to "-", basket_meal_path(meal_id: basket_meal.meal.id), method: :delete, style:"color:#9B9FFF"%>
+                <%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#9B9FFF"%>
               <% end %>
             </div>
           </div>
