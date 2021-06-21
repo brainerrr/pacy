@@ -1,0 +1,32 @@
+$logo-font-size: 32px;
+
+.text-center {
+  margin-top: 30px;
+}
+
+.text-center h1 {
+  font-size: 40px;
+  color: #0D0905;
+}
+
+.text-center h4 {
+  font-size: 24px;
+  color: #0D0905;
+}
+
+.qr-code {
+  position: relative;
+  text-align: center;
+  margin-top: 32px;
+}
+
+#logo {
+  position: absolute;
+  color: $white;
+  font-size: $logo-font-size;
+  left: 0;
+  right: 0;
+  top: 123px - $logo-font-size;
+  margin: auto;
+}
+
