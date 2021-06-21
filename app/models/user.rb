@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :baskets, dependent: :destroy
 
   def find_or_create_basket_for(table)
-    (baskets.find_by status: "Pending", table: table) || baskets.create(table: table)
+    (baskets.find_by status: 0, table: table) || baskets.create(table: table)
   end
 end

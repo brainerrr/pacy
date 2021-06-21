@@ -20,7 +20,7 @@ Table.create!(number: 3, restaurant_id: Restaurant.first.id)
 Table.create!(number: 4, restaurant_id: Restaurant.first.id)
 
 p "Creating Baskets..."
-Basket.create!(user_id: User.first.id, table_id: Table.first.id, status: "Pending")
+Basket.create!(user_id: User.first.id, table_id: Table.first.id, status: 0)
 
 p "Creating Meals..."
 chaat_pic = URI.open("https://nishkitchen.com/wp-content/uploads/2017/10/Chicken-chaat-1B.jpg")
@@ -68,12 +68,12 @@ tegern = Meal.create!(name: "Tegernseer HTB", price: 1080, description: "Beer fr
 tegern.photo.attach(io: tegern_pic, filename: 'nes.png', content_type: 'image/png')
 tegern.save
 
-cola_pic = URI.open("https://www.myamericanmarket.com/873-large_default/coca-cola-classic.jpg")
+cola_pic = URI.open("https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Emblem.png")
 cola = Meal.create!(name: "Coca Cola", price: 260, description: "Sweet fizzy drink", restaurant_id: Restaurant.first.id, category: "Beverages")
 cola.photo.attach(io: cola_pic, filename: 'nes.png', content_type: 'image/png')
 cola.save
 
-fanta_pic = URI.open("https://germanfoods.eu/media/image/product/2027/lg/fanta-orange-can-034.jpg")
+fanta_pic = URI.open("https://roomservice.com.pk/wp-content/uploads/2020/11/7cd41032b1358e8ea3bd4cd529a1d45a.jpg")
 fanta = Meal.create!(name: "Fanta", price: 260, description: "Sweet orange fizzy drink", restaurant_id: Restaurant.first.id, category: "Beverages")
 fanta.photo.attach(io: fanta_pic, filename: 'nes.png', content_type: 'image/png')
 fanta.save
