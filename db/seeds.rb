@@ -20,7 +20,7 @@ Table.create!(number: 3, restaurant_id: Restaurant.first.id)
 Table.create!(number: 4, restaurant_id: Restaurant.first.id)
 
 p "Creating Baskets..."
-Basket.create!(user_id: User.first.id, table_id: Table.first.id, status: 1)
+Basket.create!(user_id: User.first.id, table_id: Table.first.id, status: 0)
 
 p "Creating Meals..."
 chaat_pic = URI.open("https://nishkitchen.com/wp-content/uploads/2017/10/Chicken-chaat-1B.jpg")
