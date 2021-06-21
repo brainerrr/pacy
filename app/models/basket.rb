@@ -3,8 +3,5 @@ class Basket < ApplicationRecord
   belongs_to :table
   has_many :basket_meals, dependent: :destroy
   has_many :meals, through: :basket_meals
-  attribute :status, :string, default: 'Pending'
-  STATUSES = ["Pending", "Confirmed"]
-  validates :status, presence: true
-  validates :status, inclusion: { in: STATUSES }
+  enum status: { pending: 0, processing_payment: 1, confirmed: 2, cancelled: -1 }
 end
