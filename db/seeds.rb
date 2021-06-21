@@ -68,7 +68,7 @@ tegern = Meal.create!(name: "Tegernseer HTB", price: 1080, description: "Beer fr
 tegern.photo.attach(io: tegern_pic, filename: 'nes.png', content_type: 'image/png')
 tegern.save
 
-cola_pic = URI.open("https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Emblem.png")
+cola_pic = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Coca-Cola_bottle_cap.svg/1200px-Coca-Cola_bottle_cap.svg.png")
 cola = Meal.create!(name: "Coca Cola", price: 260, description: "Sweet fizzy drink", restaurant_id: Restaurant.first.id, category: "Beverages")
 cola.photo.attach(io: cola_pic, filename: 'nes.png', content_type: 'image/png')
 cola.save
