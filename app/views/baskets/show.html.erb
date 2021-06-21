@@ -4,8 +4,8 @@
   <div class="newscroll">
     <div class="cards-basket">
       <div class="header">
-        <h1>Your Basket</h1>
-        <h4> Table Number <%= @basket.table.number %></h4>
+        <h1> Table #<%= @basket.table.number %></h1>
+        <h4>Your Basket</h4>
       </div>
       <div class="back" style="overflow: scroll">
         <% @basket.basket_meals.each do |basket_meal| %>
@@ -23,6 +23,9 @@
                 <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
               <% end %>
             </div>
+          </div>
+          <div class='header'>
+            <h4 >Shared Basket</h4>
           </div>
         <% end  %>
         </div>
