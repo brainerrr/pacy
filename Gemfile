@@ -29,6 +29,7 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'cloudinary', '~> 1.16.0'
 gem 'rqrcode'
+gem 'geocoder'
 
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
