@@ -1,12 +1,17 @@
 <% @totalprice = 0 %>
 <button class="btn backbtn"><%= link_to "<", restaurant_meals_path(restaurant_id:@basket.table.restaurant_id, table_id: @basket.table.id)%></button>
+
 <div class="basket">
   <div class="newscroll">
     <div class="cards-basket">
       <div class="header">
         <h1> Table #<%= @basket.table.number %></h1>
+      </div>
+
+      <div class="basket-title">
         <h4>Your Basket</h4>
       </div>
+
       <div class="back" style="overflow: scroll">
         <% @basket.basket_meals.each do |basket_meal| %>
           <% @totalprice += (basket_meal.meal.price * basket_meal.quantity)%>
@@ -25,18 +30,19 @@
             </div>
           </div>
         <% end  %>
-          <div class='header'>
-            <h4>Shared Basket</h4>
-          </div>
+        <div class='header'>
+          <h4>Shared Basket</h4>
         </div>
-          <div class="price">
-              <h3>Total price : <%=  "%.2f" % (@totalprice / 100.00) %>€</h3>
-          </div>
       </div>
     </div>
+  </div>
+  <br>
+  <br>
 
-    <div class="payment-button">
-      <%= link_to 'Pay',  pending_payment_basket_path(@basket), class:"payment" %>
+  <div class="d-flex w-100 justify-content-center">
+    <div class="payment-button w-100">
+      <%= link_to "Pay #{"%.2f" % (@totalprice / 100.00)}€" ,  pending_payment_basket_path(@basket), class:"payment" %>
     </div>
+  </div>
 
 </div>
