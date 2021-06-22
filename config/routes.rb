@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     member do
       get :payment_confirmation
     end
-    resources :basket_meals, only: [:create, :edit]
+    resources :basket_meals, only: [:create, :edit] do
+      get 'share', to: 'basket_meals#share'
+      post 'share_with', to: 'basket_meals#share_with'
+    end
   end
   resources :tables, only: [] do
     member do

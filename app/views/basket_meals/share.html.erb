@@ -1,0 +1,6 @@
+<h1>Share</h1>
+
+<%= form_with url: basket_basket_meal_share_with_url([@basket_meal.basket, @basket_meal]) do |form| %>
+  <%= select_tag "user", options_from_collection_for_select(@users, "id", "first_name") %>
+  <%= submit_tag "Share" %>
+<% end %>

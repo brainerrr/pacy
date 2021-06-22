@@ -23,30 +23,29 @@ class BasketMealsController < ApplicationController
   end
 
   def update
-    raise
-    if
-      @basket_meal = BasketMeal.find(params[:id])
-      @basket_meal.quantity = @basket_meal.quantity - 1
-      @basket_meal.save
-      redirect_to basket_path(@basket_meal.basket)
-    else
+    @basket_meal = BasketMeal.find(params[:id])
+    @basket_meal.update(basket_meal_params)
 
-    end
+    @basket_meal.save
+    redirect_to basket_path(@basket_meal.basket)
   end
 
-  def edit
-    @users = []
+  def share
+    @basket_meal = BasketMeal.find(params[:basket_meal_id])
+    @users = @basket_meal.basket.table.users - [current_user]
+  end
 
-    @basket_meal = BasketMeal.find(params[:id])
-    @user_baskets = Basket.where(user_id: User.all, table_id: Table.first)
-    @user_baskets.each do |user_basket|
-      @users << user_basket.user.last_name
-    end
+  def share_with
+    @basket_meal = BasketMeal.find(params[:basket_meal_id])
+    @meal = @basket_meal.meal
 
-    # show the user all other members' last_name and/or first_name on the table
-    # let the user pick one
-    # for that chosen member create a basket_meal with quantity 0.5
-    # update own basket_meal quantity to 0.5
+    @other_user = User.find(params[:user])
+    @basket_meal.update(quantity: @basket_meal.quantity / 2.0)
+    @other_basket = @other_user.find_or_create_basket_for(@basket_meal.basket.table)
+
+    BasketMeal.create(meal: @meal, basket: @other_basket, quantity: @basket_meal.quantity)
+
+    redirect_to basket_path(@basket_meal.basket)
   end
 
   private
