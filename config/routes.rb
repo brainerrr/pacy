@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :baskets, only: [:show, :update] do
     member do
       get :payment_confirmation
+      get :pending_payment
     end
     resources :basket_meals, only: [:create, :edit] do
       get 'share', to: 'basket_meals#share'

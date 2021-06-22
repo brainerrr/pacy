@@ -28,10 +28,13 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { basicQrCodeReader } from '../plugins/basic_qr_code_reader';
+import { paymentRedirect } from '../plugins/payment_redirect';
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   basicQrCodeReader();
+  paymentRedirect();
 });
 

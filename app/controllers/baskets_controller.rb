@@ -18,6 +18,9 @@ class BasketsController < ApplicationController
     @basket.destroy
   end
 
+  def pending_payment
+    @basket = Basket.find(params[:id])
+  end
 
   private
 
