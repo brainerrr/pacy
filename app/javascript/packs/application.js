@@ -32,6 +32,6 @@ import { basicQrCodeReader } from '../plugins/basic_qr_code_reader';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  basicQrCodeReader()
+  basicQrCodeReader();
 });
 

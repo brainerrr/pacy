@@ -10,6 +10,7 @@ class MealsController < ApplicationController
     @table = Table.find(params[:table_id])
     @current_basket = current_user.find_or_create_basket_for(@table)
     @item_count = countitems(@current_basket)
+    @basket_meal = BasketMeal.new
   end
 
   private
