@@ -14,8 +14,10 @@ Rails.application.routes.draw do
       get :pending_payment
     end
     resources :basket_meals, only: [:create, :edit] do
-      get 'share', to: 'basket_meals#share'
-      post 'share_with', to: 'basket_meals#share_with'
+      collection do
+        get 'share', to: 'basket_meals#share'
+        post 'share_with', to: 'basket_meals#share_with'
+      end
     end
   end
   resources :tables, only: [] do

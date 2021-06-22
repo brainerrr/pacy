@@ -31,21 +31,24 @@ class BasketMealsController < ApplicationController
   end
 
   def share
-    @basket_meal = BasketMeal.find(params[:basket_meal_id])
-    @users = @basket_meal.basket.table.users - [current_user]
+    @basket = Basket.find(params[:basket_id])
+    @users = @basket.table.users - [current_user]
+    @basket_meal = BasketMeal.new
   end
 
   def share_with
-    @basket_meal = BasketMeal.find(params[:basket_meal_id])
-    @meal = @basket_meal.meal
-
+    @meal = Meal.find(params[:meal_id])
+    @basket = Basket.find(params[:basket_id])
     @other_user = User.find(params[:user])
-    @basket_meal.update(quantity: @basket_meal.quantity / 2.0)
-    @other_basket = @other_user.find_or_create_basket_for(@basket_meal.basket.table)
+
+    @basket_meal = BasketMeal.new(quantity: 0.5, basket: @basket, meal: @meal)
+    @basket_meal.save
+
+    @other_basket = Basket.find_by(table: @basket.table, user: @other_user)
 
     BasketMeal.create(meal: @meal, basket: @other_basket, quantity: @basket_meal.quantity)
 
-    redirect_to basket_path(@basket_meal.basket)
+    redirect_to restaurant_meals_path(@meal.restaurant, table_id: @basket.table)
   end
 
   private
