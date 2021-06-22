@@ -11,7 +11,7 @@ p "Creating User..."
 User.create!(first_name: "John", last_name: "Cena", email: "john_cena@gmail.com", password: "password")
 
 p "Creating Restaurant..."
-Restaurant.create!(name: "Blockhouse", address: "Blockhouse Street, 4, Hamburg", category: "Indian")
+Restaurant.create!(name: "Blockhouse", address: "Barcelona", category: "Indian")
 
 p "Creating Tables..."
 Table.create!(number: 1, restaurant_id: Restaurant.first.id)

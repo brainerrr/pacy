@@ -29,6 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { basicQrCodeReader } from '../plugins/basic_qr_code_reader';
 import { paymentRedirect } from '../plugins/payment_redirect';
+import { initMapbox } from '../plugins/init_mapbox';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -36,5 +37,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   basicQrCodeReader();
   paymentRedirect();
+  initMapbox();
 });
 

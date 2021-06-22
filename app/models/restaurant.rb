@@ -5,4 +5,6 @@ class Restaurant < ApplicationRecord
   validates :category, inclusion: { in: CATEGORIES }
   has_many :tables, dependent: :destroy
   has_many :meals, dependent: :destroy
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
