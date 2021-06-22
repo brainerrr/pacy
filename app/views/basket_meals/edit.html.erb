@@ -1,0 +1,7 @@
+<h1>Edit</h1>
+<%= simple_form_for(@basket_meal) do |f| %>
+  <%= f.input :quantity %>
+  <%= f.association :user, collection: @users, selected: params[:user] %>
+  <%= f.button :submit %>
+<% end %>
+

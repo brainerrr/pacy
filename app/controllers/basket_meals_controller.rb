@@ -24,10 +24,30 @@ class BasketMealsController < ApplicationController
   end
 
   def update
+    raise
+    if
+      @basket_meal = BasketMeal.find(params[:id])
+      @basket_meal.quantity = @basket_meal.quantity - 1
+      @basket_meal.save
+      redirect_to basket_path(@basket_meal.basket)
+    else
+
+    end
+  end
+
+  def edit
+    @users = []
+
     @basket_meal = BasketMeal.find(params[:id])
-    @basket_meal.quantity = @basket_meal.quantity - 1
-    @basket_meal.save
-    redirect_to basket_path(@basket_meal.basket)
+    @user_baskets = Basket.where(user_id: User.all, table_id: Table.first)
+    @user_baskets.each do |user_basket|
+      @users << user_basket.user.last_name
+    end
+
+    # show the user all other members' last_name and/or first_name on the table
+    # let the user pick one
+    # for that chosen member create a basket_meal with quantity 0.5
+    # update own basket_meal quantity to 0.5
   end
 
   private

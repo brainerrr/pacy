@@ -22,6 +22,7 @@
               <% else %>
                 <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
               <% end %>
+              <button type="button" class="btn all-btn-modal" data-dismiss="modal"> <%= link_to "Share", edit_basket_basket_meal_path(@basket, basket_meal) %></button>
             </div>
           </div>
         <% end  %>

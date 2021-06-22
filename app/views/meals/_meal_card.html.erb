@@ -26,7 +26,7 @@
         <p><%= "%.2f" % (meal.price / 100.00) %>€</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn all-btn-modal " data-dismiss="modal">Close</button>
+        <button type="button" class="btn all-btn-modal" data-dismiss="modal">Close</button>
         <button type="button" class="btn all-btn-modal"> <%= link_to "+", basket_basket_meals_path(basket, meal_id: meal), method: :post, style:"color: white"%></button>
       </div>
     </div>

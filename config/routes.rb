@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     member do
       get :payment_confirmation
     end
-    resources :basket_meals, only: [:create]
+    resources :basket_meals, only: [:create, :edit]
   end
   resources :tables, only: [] do
     member do
