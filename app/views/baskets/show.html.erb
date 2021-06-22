@@ -18,7 +18,12 @@
               </h4>
               <p><%= "%.2f" % (basket_meal.meal.price / 100.00) %>€</p>
               <% if basket_meal.quantity > 1 %>
-                <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :patch, style:"color:#fdf5ec"%></button>
+                <%= simple_form_for(basket_meal) do |f| %>
+                  <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
+                  <button type="submit" class='btn-minus'>
+                    -
+                  </button>
+                <% end %>
               <% else %>
                 <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
               <% end %>
