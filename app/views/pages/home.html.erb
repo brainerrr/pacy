@@ -2,7 +2,25 @@
   <h1 ><strong><i>Pacy</i></strong></h1>
   <div class='button-wrapper'>
 
-   <%= link_to "Restaurant Menu", restaurant_meals_path(Restaurant.first, table_id: Table.first.id), class: "all-btn-home" %>
+    <%= link_to "Restaurant Menu", restaurant_meals_path(Restaurant.first, table_id: Table.first.id), class: "all-btn-home" %>
 
-  <%= link_to basic_qr_code_reader_path, class: "all-btn-home" do %> <i class="fas fa-qrcode"></i> <% end %>
+  <%= link_to basic_qr_code_reader_path, class: "all-btn-home" do %> <i class="fas fa-camera"></i> <% end %>
+  <br>
+  <br>
+  <br>
+  <nav class="menu">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
+    <label class="menu-open-button" for="menu-open">
+      <span class="hamburger hamburger-1"></span>
+      <span class="hamburger hamburger-2"></span>
+      <span class="hamburger hamburger-3"></span>
+    </label>
+    <a href="#" class="menu-item"> <i class="fas fa-bar-chart"> </i> </a>
+    <a href="#" class="menu-item"> <i class="fas fa-plus"></i> </a>
+    <a href="#" class="menu-item"> <i class="fas fa-heart"></i> </a>
+    <a href="#" class="menu-item"> <i class="fas fa-envelope"></i> </a>
+    <a href="#" class="menu-item"> <i class="fas fa-cog"> </i> </a>
+  </nav>
+
+
 </div>
