@@ -37,9 +37,6 @@
         <div class='header'>
           <h4>Shared Basket</h4>
         </div>
-          <div class="price">
-              <h3>Total price : <%= @total_price %>€</h3>
-          </div>
       </div>
     </div>
   </div>
@@ -48,7 +45,7 @@
 
   <div class="d-flex w-100 justify-content-center">
     <div>
-      <button id="pay" class="payment">Pay</button>
+      <button id="pay" class="payment d-flex w-100 justify-content-center">Pay <%= @total_price %>€</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');

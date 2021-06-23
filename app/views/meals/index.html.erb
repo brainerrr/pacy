@@ -48,7 +48,7 @@
     <br>
     <br>
     <br>
-      <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center;' do %>
+      <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center; text-decoration: none;' do %>
           <% if @item_count > 0 %>
             <div class="product-number" style ="width: 18px; font-height: 2px; height: 19px; align-items: center; display: flex; justify-content: center;"><%= "#{"%.0f" % (@item_count)}" %></div>
           <% end %>
