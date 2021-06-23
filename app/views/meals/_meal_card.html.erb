@@ -15,23 +15,25 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Add item</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle"><strong>Add item</strong></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h4><%= meal.name %></h4>
+        <h4><strong><%= meal.name %></strong></h4>
         <h6><%= meal.description %></h6>
         <p><%= humanized_money_with_symbol(meal.price) %></p>
       </div>
       <div class="modal-footer">
         <%= simple_form_for [@current_basket, @basket_meal] do |f| %>
-          <%= f.input :meal_id, as: :hidden, input_html: { value: meal.id } %>
-          <%= f.input :quantity, input_html: { class: "form-control input-number", value: 1, min: 1 }%>
-          <%= f.submit "+", class:"btn all-btn-modal" %>
+          <%= f.input :meal_id, as: :hidden, input_html: { value: meal.id }, style:"text-decoration: none" %>
+          <%= f.input :quantity, input_html: { class: "form-control input-number", value: 1, min: 1 }, style:"text-decoration: none"%>
+          <%= f.submit "+", class:"btn all-btn-modal", id:"button-1", style:"text-decoration: none"%>
         <% end %>
-        <%= link_to "Share", share_basket_basket_meals_path(basket_id: @current_basket.id, meal_id: meal.id)%>
+        <%= link_to "Share", share_basket_basket_meals_path(basket_id: @current_basket.id, meal_id: meal.id), class:"btn all-btn-modal-index", id:"button-2"%>
+
+        <%# if @item.rigged then 'Yes' else 'No' end %>
       </div>
     </div>
   </div>
