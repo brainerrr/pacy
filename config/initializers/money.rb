@@ -1,10 +1,11 @@
 # encoding : utf-8
+require 'money-rails'
 
 Money.locale_backend = :currency
+
 MoneyRails.configure do |config|
   config.default_currency = :eur
   # [...]
-end
 
   # To set the default currency
   #
@@ -116,3 +117,4 @@ end
   #
   # Example:
   # config.raise_error_on_money_parsing = false
+end
