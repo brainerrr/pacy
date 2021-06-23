@@ -127,12 +127,13 @@
 }
 
 .btn-minus {
-  text-decoration: none;
-  background: #9B9FFF;
-  border: 1px solid;
-  border-color: #8B8FE5;
+  background: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
   padding: 0px 8px;
+  border-color: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
   border-radius: 10px;
   font-size: 15px;
   transition: opacity 0.3s ease;
+  a {
+    text-decoration: none;
+  }
 }

@@ -189,3 +189,20 @@ body {
 .fa-bar-chart-o:before, .fa-bar-chart:before {
     content: "\f080";
 }
+
+.map-design {
+  height: 30vh;
+  width: 50vw;
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+  .mapboxgl-ctrl-top-right {
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .mapboxgl-ctrl {
+      margin: 0 !important;
+    }
+  }
+}

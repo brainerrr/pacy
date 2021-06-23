@@ -22,8 +22,8 @@
     <br>
   <div class="cards">
 
-    <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;">The Taj</h1>
-    <h4 class="text-center" style="font-size: 20px; color: #fdf5ec;"> Table Number <%= @table.number %></h4>
+    <h1 class="text-center" style="font-size: 50px; color: #fdf5ec;"><strong>The Taj</strong></h1>
+    <h4 class="text-center" style="font-size: 20px; color: #fdf5ec; margin-top: 10px;"> Table N° <%= @table.number %></h4>
     <h2>Most ordered</h2>
     <%  @favourites.each do |favourite|%>
       <%= render("meal_card",{meal: favourite, basket: @current_basket}) %>
@@ -50,9 +50,9 @@
     <br>
       <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center;' do %>
           <% if @item_count > 0 %>
-            <div class="product-number"><%= @item_count %></div>
+            <div class="product-number" style ="width: 18px; font-height: 2px; height: 19px; align-items: center; display: flex; justify-content: center;"><%= @item_count %></div>
           <% end %>
-          <i class="fas fa-shopping-cart"></i>
+          <i class="fas fa-shopping-cart" style="line-height: 1.2rem;"></i>
         <%end%>
       <br>
       <br>

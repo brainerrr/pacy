@@ -12,20 +12,26 @@
     <a href="#" class="menu-item"> <i class="fas fa-cog"> </i> </a>
 </nav>
 
-<div class='wrapper col-sm'>
-  <h1 ><strong><i>Pacy</i></strong></h1>
+<div class='wrapper col-sm d-flex flex-column'>
+  <h1 >
+    <strong>
+      <i>Pacy</i>
+    </strong>
+  </h1>
+
   <div class='button-wrapper'>
 
     <%= link_to "Restaurant Menu", restaurant_meals_path(Restaurant.first, table_id: Table.first.id), class: "all-btn-home" %>
 
-  <%= link_to basic_qr_code_reader_path, class: "all-btn-home" do %> <i class="fas fa-camera"></i> <% end %>
-  <br>
-  <br>
-  <br>
-</div>
-</div>
-<div id="map"
-     style="width: 100%; height: 600px;"
+    <%= link_to basic_qr_code_reader_path, class: "all-btn-home" do %> <i class="fas fa-camera"></i> <% end %>
+
+    <br>
+    <br>
+    <br>
+  </div>
+
+  <div class="map-design d-flex justify-content-center align-items-center w-100" id="map"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
