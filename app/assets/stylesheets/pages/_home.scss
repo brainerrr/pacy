@@ -20,7 +20,7 @@ body {
   justify-content: center;
   text-align: center !important;
   align-items: center;
-  padding-top: 270px;
+  padding-top: 200px;
 
 
   h1{
@@ -63,6 +63,7 @@ body {
   box-sizing: border-box;
   font-size: 20px;
   text-align: left;
+  transform: translate(-14px, -328px);
   filter: url(#shadowed-goo);
 }
 
@@ -79,8 +80,8 @@ body {
 .menu-item, .menu-open-button {
   background: linear-gradient(180.82deg, #9498EF 24.73%, #B379E0 99.29%);
   border-radius: 100%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin-left: -40px;
   position: absolute;
   top: 20px;
@@ -122,6 +123,7 @@ body {
 .menu-open:checked ~ .menu-item:nth-child(3) {
   transition-duration: 160ms;
   transform: translate3d(114.42548px, 11.48084px, 0);
+  align-items: center
 }
 
 .fa {
@@ -135,47 +137,47 @@ body {
 }
 
 .menu-open:checked ~ .menu-item:nth-child(7) {
-    transition-duration: 480ms;
-    transform: translate3d(-114.40705px, 11.66307px, 0);
+  transition-duration: 480ms;
+  transform: translate3d(-114.40705px, 11.66307px, 0);
 }
 
 .menu-open:checked ~ .menu-item {
-    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+  transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
 }
 
 .menu-open:checked ~ .menu-item:nth-child(6) {
-    transition-duration: 400ms;
-    transform: translate3d(-77.04956px, 85.37192px, 0);
+  transition-duration: 400ms;
+  transform: translate3d(-77.04956px, 85.37192px, 0);
 }
 
 .menu-open:checked ~ .menu-item {
-    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+  transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
 }
 
 .menu-open:checked ~ .menu-item:nth-child(5) {
-    transition-duration: 320ms;
-    transform: translate3d(0.09158px, 114.99996px, 0);
+  transition-duration: 320ms;
+  transform: translate3d(0.09158px, 114.99996px, 0);
 }
 
 .menu-open:checked ~ .menu-item {
-    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+  transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
 }
 
 .menu-open:checked ~ .menu-item:nth-child(4) {
-    transition-duration: 240ms;
-    transform: translate3d(77.18543px, 85.2491px, 0);
+  transition-duration: 240ms;
+  transform: translate3d(77.18543px, 85.2491px, 0);
 }
 
 .menu-open:checked ~ .menu-item {
-    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+  transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
 }
 
 .fa-plus:before {
-    content: "\f067";
+  content: "\f067";
 }
 
 .fa-gear:before, .fa-cog:before {
-    content: "\f013";
+  content: "\f013";
 }
 
 .fa-envelope:before {
@@ -183,12 +185,14 @@ body {
 }
 
 .fa-heart:before {
-    content: "\f004";
+   content: "\f004";
 }
 
 .fa-bar-chart-o:before, .fa-bar-chart:before {
-    content: "\f080";
+  content: "\f080";
 }
+
+
 
 .map-design {
   height: 30vh;

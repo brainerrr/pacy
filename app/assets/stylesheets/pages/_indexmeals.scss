@@ -96,6 +96,7 @@
   position: fixed;
   bottom: 20px;
   font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
 }
 
 .all-btn {
@@ -108,12 +109,14 @@
   font-weight: lighter;
   transition: opacity 0.3s ease;
   font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
 }
 
 .btn .add-btn {
   margin-left: 30px;
   margin-top: 5px;
   font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
 }
 
 .btn:focus, .btn.focus {
@@ -136,4 +139,32 @@
   a {
     text-decoration: none;
   }
+}
+
+.all-btn-modal-index {
+  color: white;
+  background: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
+  border: 1px solid;
+  border-color: linear-gradient(180deg, #FFB547 0%, #F4752D 86.46%);
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  transform: translate(-145px, 50px);
+  text-decoration: none;
+}
+
+#button1 , #button2 {
+display:inline-block;
+}
+
+
+label.float  {
+  color:  #0d0905;
+}
+
+.modal-content {
+  border-radius: 20px;
 }
