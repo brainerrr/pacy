@@ -31,6 +31,7 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'rqrcode'
 gem 'geocoder'
 gem 'money-rails'
+gem 'stripe'
 
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
