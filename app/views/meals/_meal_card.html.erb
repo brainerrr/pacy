@@ -5,7 +5,7 @@
     </div>
     <div class="card-product-infos d-flex flex-column justify-content-between w-100 h-100 px-2 py-3 text-left">
       <h4 class="mb-0"><%= meal.name %></h4>
-      <p class="mb-0"><%= humanized_money_with_symbol(meal.price) %></p>
+      <p class="mb-0 text-right"><%= humanized_money_with_symbol(meal.price) %></p>
     </div>
   </div>
 </button>
@@ -29,9 +29,9 @@
         <%= simple_form_for [@current_basket, @basket_meal] do |f| %>
           <%= f.input :meal_id, as: :hidden, input_html: { value: meal.id }, style:"text-decoration: none" %>
           <%= f.input :quantity, input_html: { class: "form-control input-number", value: 1, min: 1 }, style:"text-decoration: none"%>
-          <%= f.submit "+", class:"btn all-btn-modal", id:"button-1", style:"text-decoration: none"%>
+          <%= f.submit "+", class:"btn all-btn-modal", id:"button-1", style:"text-decoration: none; color:#fdf5ec;" %>
         <% end %>
-        <%= link_to "Share", share_basket_basket_meals_path(basket_id: @current_basket.id, meal_id: meal.id), class:"btn all-btn-modal-index", id:"button-2"%>
+        <%= link_to "Share", share_basket_basket_meals_path(basket_id: @current_basket.id, meal_id: meal.id), class:"btn all-btn-modal-index", id:"button-2", style:"text-decoration: none; color:#fdf5ec;"%>
 
         <%# if @item.rigged then 'Yes' else 'No' end %>
       </div>
