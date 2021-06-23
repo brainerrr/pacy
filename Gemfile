@@ -32,6 +32,7 @@ gem 'rqrcode'
 gem 'geocoder'
 gem 'money-rails'
 gem 'stripe'
+gem 'stripe_event'
 
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
