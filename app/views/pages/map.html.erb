@@ -1,4 +1,12 @@
- <div class="map-design d-flex justify-content-center w-100" id="map"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+<button class="btn backbtn"><%= link_to "<", root_path()%></button>
+
+<div class="newmap">
+  <form class="example" action="action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  <div class="map-design d-flex justify-content-center w-100" id="map"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+</div>

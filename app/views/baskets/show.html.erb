@@ -24,7 +24,7 @@
               <% if basket_meal.quantity > 1 %>
                 <%= simple_form_for(basket_meal) do |f| %>
                   <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
-                  <button type="submit" class='btn-minus'>
+                  <button type="submit" class='btn-minus' style="text-decoration: none; color:#fdf5ec;">
                     -
                   </button>
                 <% end %>
@@ -48,7 +48,7 @@
 
   <div class="d-flex w-100 justify-content-center">
     <div>
-      <button id="pay" class="btn btn-primary">Pay</button>
+      <button id="pay" class="payment">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
