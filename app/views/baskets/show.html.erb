@@ -18,7 +18,7 @@
           <div class="card-products">
             <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
             <div class="card-products-infos">
-              <h4> <%= basket_meal.quantity %>x
+              <h4> <%= "#{"%.0f" % (basket_meal.quantity)} "  %>x
                 <%= basket_meal.meal.name %>
               </h4>
               <p><%= humanized_money_with_symbol(basket_meal.meal.price) %></p>
@@ -49,7 +49,7 @@
 
   <div class="d-flex w-100 justify-content-center">
     <div class="payment-button w-100">
-      <%= link_to "Pay #{"%.2f" % (@totalprice / 100.00)}€" ,  pending_payment_basket_path(@basket), class:"payment" %>
+      <%= link_to "Pay #{"%.2f" % (@totalprice)}€" ,  pending_payment_basket_path(@basket), class:"payment" %>
     </div>
   </div>
 

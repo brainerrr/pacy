@@ -51,9 +51,17 @@ class BasketMealsController < ApplicationController
     redirect_to restaurant_meals_path(@meal.restaurant, table_id: @basket.table)
   end
 
+  # def self.quantity_display
+  #   if self.quantity == self.quantity.to_i
+  #     self.quantity = self.quantity.to_i
+  #   end
+  #   return self.quantity
+  # end
+
   private
 
   def basket_meal_params
     params.require(:basket_meal).permit(:meal_id, :quantity)
   end
+
 end
