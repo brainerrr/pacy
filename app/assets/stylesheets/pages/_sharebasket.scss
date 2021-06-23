@@ -1,0 +1,34 @@
+h1 {
+  color: #fdf5ec;
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  margin-top: 10px;
+}
+ select#user {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+ }
+
+.all-btn-modal-share {
+  color: #fdf5ec;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-item: center;
+}
+
+.dropdown{
+  display: flex;
+  justify-content: center;
+  align-item: center;
+}
+
