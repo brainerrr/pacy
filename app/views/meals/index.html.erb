@@ -50,7 +50,7 @@
     <br>
       <%= link_to basket_path(@current_basket), class:'btn-basket' , style:'color: #fdf5ec; text-align: center;' do %>
           <% if @item_count > 0 %>
-            <div class="product-number" style ="width: 18px; font-height: 2px; height: 19px; align-items: center; display: flex; justify-content: center;"><%= @item_count %></div>
+            <div class="product-number" style ="width: 18px; font-height: 2px; height: 19px; align-items: center; display: flex; justify-content: center;"><%= "#{"%.0f" % (@item_count)}" %></div>
           <% end %>
           <i class="fas fa-shopping-cart" style="line-height: 1.2rem;"></i>
         <%end%>

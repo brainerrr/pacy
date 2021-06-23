@@ -30,6 +30,7 @@ import "bootstrap";
 import { basicQrCodeReader } from '../plugins/basic_qr_code_reader';
 import { paymentRedirect } from '../plugins/payment_redirect';
 import { initMapbox } from '../plugins/init_mapbox';
+import { loadDynamicBannerText } from '../plugins/typed';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -38,5 +39,6 @@ document.addEventListener('turbolinks:load', () => {
   basicQrCodeReader();
   paymentRedirect();
   initMapbox();
+  loadDynamicBannerText();
 });
 
