@@ -1,18 +1,17 @@
-
 <div class='wrapper col-sm d-flex flex-column'>
-<nav class="menu">
-    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
-    <label class="menu-open-button" for="menu-open">
-      <span class="hamburger hamburger-1"></span>
-      <span class="hamburger hamburger-2"></span>
-      <span class="hamburger hamburger-3"></span>
-    </label>
-    <a href="#" class="menu-item"> <i class="fas fa-history align-items-center"> </i> </a>
-    <a href="#" class="menu-item"> <i class="fas fa-heart align-items-center"></i> </a>
-    <a href="#" class="menu-item"> <i class="fas fa-map align-items-center"></i> </a>
-    <a href="#" class="menu-item"> <i class="fas fa-credit-card align-items-center"></i> </a>
-    <a href="#" class="menu-item"> <i class="fas fa-cog align-items-center"> </i> </a>
-</nav>
+  <nav class="menu">
+      <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
+      <label class="menu-open-button" for="menu-open">
+        <span class="hamburger hamburger-1"></span>
+        <span class="hamburger hamburger-2"></span>
+        <span class="hamburger hamburger-3"></span>
+      </label>
+      <a href="#" class="menu-item"> <i class="fas fa-history "> </i> </a>
+      <a href="#" class="menu-item"> <i class="fas fa-heart "></i> </a>
+      <a href="#" class="menu-item"> <i class="fas fa-map "></i> </a>
+      <a href="#" class="menu-item"> <i class="fas fa-credit-card "></i> </a>
+      <a href="#" class="menu-item"> <i class="fas fa-cog "> </i> </a>
+  </nav>
 <br>
   <h1 >
     <strong>
@@ -31,8 +30,4 @@
     <br>
   </div>
 
-  <div class="map-design d-flex justify-content-center w-100" id="map"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
 </div>
