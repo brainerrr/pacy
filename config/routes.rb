@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   end
   resources :basket_meals, only: [:destroy, :update]
 
+  get "map", to:"pages#map"
   get "stylepage", to: "pages#stylepage"
   get 'basic-qr-code-reader', to: 'basicqrcodes#index'
   mount StripeEvent::Engine, at: 'localhost:3000/stripe-webhooks'
