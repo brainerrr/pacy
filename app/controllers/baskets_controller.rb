@@ -36,6 +36,7 @@ class BasketsController < ApplicationController
         quantity: (basket_meal.quantity).to_i
       }
     end
+
     Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: @items,
