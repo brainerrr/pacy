@@ -16,7 +16,7 @@ class MealsController < ApplicationController
   private
 
   def countitems(basket)
-    @sum = 0
+    @sum = 0.0
     basket.basket_meals.each do |meal|
       @sum += meal.quantity
     end
