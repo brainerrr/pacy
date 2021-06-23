@@ -5,7 +5,7 @@
     </div>
     <div class="card-product-infos d-flex flex-column justify-content-between w-100 h-100 px-2 py-3 text-left">
       <h4 class="mb-0"><%= meal.name %></h4>
-      <p class="text-right mb-0 mr-2"><%= "%.2f" % (meal.price / 100.00) %>€</p>
+      <p class="mb-0"><%= humanized_money_with_symbol(meal.price) %></p>
     </div>
   </div>
 </button>
@@ -23,7 +23,7 @@
       <div class="modal-body">
         <h4><%= meal.name %></h4>
         <h6><%= meal.description %></h6>
-        <p><%= "%.2f" % (meal.price / 100.00) %>€</p>
+        <p><%= humanized_money_with_symbol(meal.price) %></p>
       </div>
       <div class="modal-footer">
         <%= simple_form_for [@current_basket, @basket_meal] do |f| %>
