@@ -6,8 +6,8 @@ class BasketMeal < ApplicationRecord
   enum shared: { not_shared: 0, shared: 1 }
 
   def quantity_is_greater
-    if quantity.negative?
-      errors.add("Quantity must be greater than 0")
+    if quantity <= 0
+      errors.add(:base, :invalid, message:"Quantity must be greater than 0")
     end
   end
 end
