@@ -48,10 +48,6 @@
 
   <div class="d-flex w-100 justify-content-center">
     <div>
-      <%= form_tag basket_path do %>
-        <%= hidden_field_tag 'basket_meal_id', @basket.basket_meals %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-      <% end %>
       <button id="pay" class="btn btn-primary">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
