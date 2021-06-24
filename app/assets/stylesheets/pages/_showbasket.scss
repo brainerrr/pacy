@@ -50,7 +50,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 110px;
+  padding: 14px 100px;
   background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -58,13 +58,16 @@
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
   border: none;
-
+  margin-top: 0px;
+  transform: translate(0px, -30px);
 }
+
 
 .payment > a {
   text-align: center;
   font-family: 'Quicksand', sans-serif;
 }
+
 .back {
   background:rgba(255,255,255,0.5);
   border-radius: 15px;
@@ -95,6 +98,7 @@
   left: 0%;
   right: -0.27%;
   width: 100%;
+  margin: 0px;
 }
 
 .cancel{
@@ -180,4 +184,8 @@
 .card-products-infos {
   position: relative;
   flex-grow: 1;
+}
+
+.newscroll{
+  margin: 0px;
 }
