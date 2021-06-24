@@ -24,7 +24,7 @@ body {
 
 
   h1{
-    padding-bottom: 50px;
+    padding-bottom: 5px;
     color: #fdf5ec;
     font-size: 75px;
   }
@@ -38,12 +38,13 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid;
   border: none;
-  padding: 8px 24px;
+  padding: 12px 35px;
   border-radius: 10px;
   font-weight: lighter;
   transition: opacity 0.3s ease;
   text-align: center;
   text-decoration: none;
+  font-size: 25px
 }
 
 .all-btn-home:hover {
