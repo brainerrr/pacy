@@ -26,13 +26,13 @@ class BasketsController < ApplicationController
 
   private
 
-  def item_hash(basket_meal, basket_meal_quantity)
+ def item_hash(basket_meal, basket_meal_quantity = nil)
     {
       name: basket_meal.meal.name,
       images: [helpers.cl_image_path(basket_meal.meal.photo.key)],
       amount: basket_meal.meal.price_cents,
       currency: 'eur',
-      quantity: (basket_meal_quantity).to_i
+      quantity: basket_meal_quantity ? basket_meal_quantity.to_i : basket_meal.quantity.to_i
     }
   end
 
@@ -57,7 +57,7 @@ class BasketsController < ApplicationController
           [whole_hash, half_hash]
         end
       else
-        item_hash(basket_meal, basket_meal_quantity)
+        item_hash(basket_meal)
       end
     end.flatten
 
@@ -73,6 +73,5 @@ class BasketsController < ApplicationController
     params.require(:basket).permit(:status)
   end
 end
-
 
 
