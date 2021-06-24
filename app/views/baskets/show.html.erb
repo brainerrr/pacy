@@ -18,7 +18,7 @@
                   <h4> <%= "#{"%.0f" % (basket_meal.quantity)} "  %>x
                     <%= basket_meal.meal.name %>
                   </h4>
-                  <p><%= humanized_money_with_symbol(basket_meal.meal.price) %></p>
+                  <p><%= humanized_money_with_symbol(basket_meal.meal.price * basket_meal.quantity) %></p>
                   <% if basket_meal.quantity > 1 %>
                     <%= simple_form_for(basket_meal) do |f| %>
                       <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
@@ -43,7 +43,7 @@
                   <h4> <%= "#{"%.0f" % (basket_meal.quantity)} "  %>x
                     <%= basket_meal.meal.name %>
                   </h4>
-                  <p><%= humanized_money_with_symbol(basket_meal.meal.price) %></p>
+                  <p><%= humanized_money_with_symbol(basket_meal.meal.price * basket_meal.quantity) %></p>
                   <% if basket_meal.quantity > 1 %>
                     <%= simple_form_for(basket_meal) do |f| %>
                       <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
