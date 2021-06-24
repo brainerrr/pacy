@@ -60,12 +60,12 @@ class BasketsController < ApplicationController
         item_hash(basket_meal)
       end
     end.flatten
-
+    
     Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: @items,
       success_url: payment_confirmation_basket_url(@basket),
-      cancel_url: payment_confirmation_basket_url(@basket)
+      cancel_url: basket_url(@basket)
     )
   end
 
