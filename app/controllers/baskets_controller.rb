@@ -66,7 +66,7 @@ class BasketsController < ApplicationController
     Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: @items,
-      success_url: payment_confirmation_basket_url(@basket),
+      success_url: pending_payment_basket_url(@basket),
       cancel_url: basket_url(@basket)
     )
   end
