@@ -58,6 +58,7 @@ class BasketsController < ApplicationController
         end
       else
         item_hash(basket_meal, basket_meal.quantity)
+        raise
       end
     end.flatten
 
