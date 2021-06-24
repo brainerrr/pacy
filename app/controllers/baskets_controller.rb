@@ -57,10 +57,10 @@ class BasketsController < ApplicationController
           [whole_hash, half_hash]
         end
       else
-        item_hash(basket_meal)
+        item_hash(basket_meal, basket_meal_quantity)
       end
     end.flatten
-    
+
     Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: @items,
