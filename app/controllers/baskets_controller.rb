@@ -41,7 +41,7 @@ class BasketsController < ApplicationController
       payment_method_types: ['card'],
       line_items: @items,
       success_url: payment_confirmation_basket_url(@basket),
-      cancel_url: payment_confirmation_basket_url(@basket)
+      cancel_url: basket_url(@basket)
     )
   end
 
