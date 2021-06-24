@@ -11,6 +11,8 @@ class BasketsController < ApplicationController
 
   def show
     @basket = Basket.find(params[:id])
+    @shared_basket_meals = @basket.basket_meals.filter(&:shared?)
+    @not_shared_basket_meals = @basket.basket_meals.reject(&:shared?)
     @total_price = 0
     session = stripe_session
     @basket.update(checkout_session_id: session.id)
