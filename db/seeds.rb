@@ -29,7 +29,7 @@ chaat.photo.attach(io: chaat_pic, filename: 'nes.png', content_type: 'image/png'
 chaat.save
 
 salmon_pic = URI.open("https://www.rachaelraymag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTYxOTQ5Njk0Mjk2MjA0NTkw/indian-spiced-salmon-and-rice-888e854d.jpg")
-salmon = Meal.create!(name: "Ajwaini Salmon Tikka", price_cents: 480, description: "Scottish salmon chunks marinated with garlic, herbs & spices, yoghurt, lovage seeds & cooked in tandoor", restaurant_id: Restaurant.first.id, category: "Starter")
+salmon = Meal.create!(name: "Ajwaini Salmon Tikka", price_cents: 680, description: "Scottish salmon chunks marinated with garlic, herbs & spices, yoghurt, lovage seeds & cooked in tandoor", restaurant_id: Restaurant.first.id, category: "Starter")
 salmon.photo.attach(io: salmon_pic, filename: 'nes.png', content_type: 'image/png')
 salmon.save
 
@@ -39,7 +39,7 @@ scallops.photo.attach(io: scallops_pic, filename: 'nes.png', content_type: 'imag
 scallops.save
 
 tikka_pic = URI.open("https://www.recipetineats.com/wp-content/uploads/2018/04/Chicken-Tikka-Masala_0-SQ.jpg")
-tikka = Meal.create!(name: "Chicken Tikka Bhuna", price_cents: 560, description: "Boneless chicken breast marinated in mild spices, grilled in tandoor, cooked with tomatoes, onions & herbs", restaurant_id: Restaurant.first.id, category: "Main")
+tikka = Meal.create!(name: "Chicken Tikka Bhuna", price_cents: 1560, description: "Boneless chicken breast marinated in mild spices, grilled in tandoor, cooked with tomatoes, onions & herbs", restaurant_id: Restaurant.first.id, category: "Main")
 tikka.photo.attach(io: tikka_pic, filename: 'nes.png', content_type: 'image/png')
 tikka.save
 
@@ -49,22 +49,22 @@ jalfrezi.photo.attach(io: jalfrezi_pic, filename: 'nes.png', content_type: 'imag
 jalfrezi.save
 
 saag_pic = URI.open("https://www.cubesnjuliennes.com/wp-content/uploads/2015/08/DS2_8666-opt670.jpg")
-saag = Meal.create!(name: "Saag Gosht", price_cents: 350, description: "Spinach cooked with tender lamb in a light sauce with fresh herbs & spices", restaurant_id: Restaurant.first.id, category: "Main")
+saag = Meal.create!(name: "Saag Gosht", price_cents: 2350, description: "Spinach cooked with tender lamb in a light sauce with fresh herbs & spices", restaurant_id: Restaurant.first.id, category: "Main")
 saag.photo.attach(io: saag_pic, filename: 'nes.png', content_type: 'image/png')
 saag.save
 
 saagwala_pic = URI.open("https://i.pinimg.com/originals/37/41/71/374171540c18aa5ca4a4bfa802d58666.jpg")
-saagwala = Meal.create!(name: "King Prawn Saagwala", price_cents: 680, description: "Spinach cooked with king prawn in a light sauce with fresh herbs & spices", restaurant_id: Restaurant.first.id, category: "Main")
+saagwala = Meal.create!(name: "King Prawn Saagwala", price_cents: 2680, description: "Spinach cooked with king prawn in a light sauce with fresh herbs & spices", restaurant_id: Restaurant.first.id, category: "Main")
 saagwala.photo.attach(io: saagwala_pic, filename: 'nes.png', content_type: 'image/png')
 saagwala.save
 
 garlic_pic = URI.open("https://www.kitchensanctuary.com/wp-content/uploads/2021/03/Garlic-Naan-square-FS-42.jpg")
-garlic = Meal.create!(name: "Garlic Naan", price_cents: 580, description: "Tandoori-baked bread made from refined leavened flour, enriched with butter & milk", restaurant_id: Restaurant.first.id, category: "Main")
+garlic = Meal.create!(name: "Garlic Naan", price_cents: 380, description: "Tandoori-baked bread made from refined leavened flour, enriched with butter & milk", restaurant_id: Restaurant.first.id, category: "Main")
 garlic.photo.attach(io: garlic_pic, filename: 'nes.png', content_type: 'image/png')
 garlic.save
 
 tegern_pic = URI.open("https://www.karwendel-urlaub.de/wp-content/uploads/2020/03/Tegernsee_Bier.jpg")
-tegern = Meal.create!(name: "Tegernseer HTB", price_cents: 1080, description: "Beer from Tergernsee", restaurant_id: Restaurant.first.id, category: "Beverages")
+tegern = Meal.create!(name: "Tegernseer HTB", price_cents: 680, description: "Beer from Tergernsee", restaurant_id: Restaurant.first.id, category: "Beverages")
 tegern.photo.attach(io: tegern_pic, filename: 'nes.png', content_type: 'image/png')
 tegern.save
 
@@ -79,7 +79,7 @@ fanta.photo.attach(io: fanta_pic, filename: 'nes.png', content_type: 'image/png'
 fanta.save
 
 rasmalai_pic = URI.open("https://www.tasteofhome.com/wp-content/uploads/2021/01/rasmalai-indian-dessert.jpg?w=1200")
-rasmalai = Meal.create!(name: "Rasmalai", price_cents: 360, description: "Traditional dessert with ingredients like chenna or paneer soaked in sugar, milk and spices like saffron and cardamom.", restaurant_id: Restaurant.first.id, category: "Dessert")
+rasmalai = Meal.create!(name: "Rasmalai", price_cents: 560, description: "Traditional dessert with ingredients like chenna or paneer soaked in sugar, milk and spices like saffron and cardamom.", restaurant_id: Restaurant.first.id, category: "Dessert")
 rasmalai.photo.attach(io: rasmalai_pic, filename: 'nes.png', content_type: 'image/png')
 rasmalai.save
 
@@ -89,17 +89,15 @@ kulfi.photo.attach(io: kulfi_pic, filename: 'nes.png', content_type: 'image/png'
 kulfi.save
 
 rasgulla_pic = URI.open("https://www.tasteofhome.com/wp-content/uploads/2021/01/rasgulla-indian-dessert.jpg?fit=700,700")
-rasgulla = Meal.create!(name: "Rasgulla", price_cents: 320, description: "A common East Indian delicacy, are bite-sized cheese balls soaked in floral sugar syrup. The secret to perfecting rasgulla is ice!", restaurant_id: Restaurant.first.id, category: "Dessert")
+rasgulla = Meal.create!(name: "Rasgulla", price_cents: 420, description: "A common East Indian delicacy, are bite-sized cheese balls soaked in floral sugar syrup. The secret to perfecting rasgulla is ice!", restaurant_id: Restaurant.first.id, category: "Dessert")
 rasgulla.photo.attach(io: rasgulla_pic, filename: 'nes.png', content_type: 'image/png')
 rasgulla.save
 
 gulab_pic = URI.open("https://www.tasteofhome.com/wp-content/uploads/2021/01/gulab-jamun-indian-desserts.jpg?w=1200")
-gulab = Meal.create!(name: "Gulab Jamun", price_cents: 380, description: "Gulab Jamun is high on the list of the most popular Indian desserts!", restaurant_id: Restaurant.first.id, category: "Dessert")
+gulab = Meal.create!(name: "Gulab Jamun", price_cents: 480, description: "Gulab Jamun is high on the list of the most popular Indian desserts!", restaurant_id: Restaurant.first.id, category: "Dessert")
 gulab.photo.attach(io: gulab_pic, filename: 'nes.png', content_type: 'image/png')
 gulab.save
 
-p "Creating BasketMeals..."
-BasketMeal.create!(basket_id: Basket.first.id, meal_id: Meal.first.id)
 
 p "Finished seeding"
 
