@@ -63,12 +63,12 @@ garlic = Meal.create!(name: "Garlic Naan", price_cents: 580, description: "Tando
 garlic.photo.attach(io: garlic_pic, filename: 'nes.png', content_type: 'image/png')
 garlic.save
 
-tegern_pic = URI.open("https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/434/full/Tegernseer-Hell.jpg")
+tegern_pic = URI.open("https://www.karwendel-urlaub.de/wp-content/uploads/2020/03/Tegernsee_Bier.jpg")
 tegern = Meal.create!(name: "Tegernseer HTB", price_cents: 1080, description: "Beer from Tergernsee", restaurant_id: Restaurant.first.id, category: "Beverages")
 tegern.photo.attach(io: tegern_pic, filename: 'nes.png', content_type: 'image/png')
 tegern.save
 
-cola_pic = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Coca-Cola_bottle_cap.svg/1200px-Coca-Cola_bottle_cap.svg.png")
+cola_pic = URI.open("https://8250.co.uk/wp-content/uploads/2020/06/unnamed.jpg")
 cola = Meal.create!(name: "Coca Cola", price_cents: 260, description: "Sweet fizzy drink", restaurant_id: Restaurant.first.id, category: "Beverages")
 cola.photo.attach(io: cola_pic, filename: 'nes.png', content_type: 'image/png')
 cola.save
@@ -89,7 +89,7 @@ kulfi.photo.attach(io: kulfi_pic, filename: 'nes.png', content_type: 'image/png'
 kulfi.save
 
 rasgulla_pic = URI.open("https://www.tasteofhome.com/wp-content/uploads/2021/01/rasgulla-indian-dessert.jpg?fit=700,700")
-rasgulla = Meal.create!(name: "Rasgulla", price_cents: 300, description: "A common East Indian delicacy, are bite-sized cheese balls soaked in floral sugar syrup. The secret to perfecting rasgulla is ice!", restaurant_id: Restaurant.first.id, category: "Dessert")
+rasgulla = Meal.create!(name: "Rasgulla", price_cents: 320, description: "A common East Indian delicacy, are bite-sized cheese balls soaked in floral sugar syrup. The secret to perfecting rasgulla is ice!", restaurant_id: Restaurant.first.id, category: "Dessert")
 rasgulla.photo.attach(io: rasgulla_pic, filename: 'nes.png', content_type: 'image/png')
 rasgulla.save
 
