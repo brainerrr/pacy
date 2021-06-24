@@ -4,7 +4,7 @@
   <div class="newscroll">
     <div class="cards-basket">
       <div class="header">
-        <h1> Table #<%= @basket.table.number %></h1>
+        <h1> Table N°<%= @basket.table.number %></h1>
       </div>
 
       <div class="basket-title">
@@ -13,14 +13,17 @@
 
       <div class="back" style="overflow: scroll">
         <% @basket.basket_meals.each do |basket_meal| %>
-          <% @total_price += (basket_meal.meal.price * basket_meal.quantity)%>
+            <% @total_price += (basket_meal.meal.price * basket_meal.quantity)%>
           <div class="card-products">
             <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
-            <div class="card-products-infos">
+            <div class="card-products-infos h-100 py-2 d-flex flex-column justify-content-between align-items-start">
+
               <h4> <%= "#{"%.0f" % (basket_meal.quantity)} "  %>x
                 <%= basket_meal.meal.name %>
               </h4>
+
               <p><%= humanized_money_with_symbol(basket_meal.meal.price) %></p>
+
               <% if basket_meal.quantity > 1 %>
                 <%= simple_form_for(basket_meal) do |f| %>
                   <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
@@ -31,6 +34,7 @@
               <% else %>
                 <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
               <% end %>
+
             </div>
           </div>
         <% end  %>
