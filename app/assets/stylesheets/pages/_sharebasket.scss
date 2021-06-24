@@ -15,7 +15,7 @@ h1 {
   color: #fdf5ec;
   background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);;
   border: none;
-  padding: 8px 24px;
+  padding: 8px 40px;
   border-radius: 10px;
   font-weight: lighter;
   transition: opacity 0.3s ease;
@@ -23,12 +23,26 @@ h1 {
   font-family: 'Quicksand', sans-serif;
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 }
 
 .dropdown{
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 }
 
+// .users{
+// }
+.container_share {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  color: #fdf5ec;
+  padding: 0px 30px;
+  margin-top: 50px;
+}
