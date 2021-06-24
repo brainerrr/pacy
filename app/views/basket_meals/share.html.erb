@@ -10,14 +10,8 @@
   <br>
   <br>
   <%= form_with url: share_with_basket_basket_meals_url([@basket, @basket_meal]) do |form| %>
-    <%= select_tag "user", options_from_collection_for_select(@users, "id", "first_name"), class:"user"%>
+    <%= select_tag "user", options_from_collection_for_select(@users, "id", "first_name"), class:"user", style:"width:200px"%>
     <%= hidden_field_tag :meal_id, params[:meal_id] %>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <%= submit_tag "Share", class:"btn all-btn-modal-share"%>
     <% end %>
