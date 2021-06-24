@@ -42,12 +42,13 @@ class BasketMealsController < ApplicationController
     @other_user = User.find(params[:user])
 
     @basket_meal = BasketMeal.new(quantity: 0.5, basket: @basket, meal: @meal)
+
+    @basket_meal.shared!
     @basket_meal.save
 
     @other_basket = Basket.find_by(table: @basket.table, user: @other_user)
 
-    BasketMeal.create(meal: @meal, basket: @other_basket, quantity: @basket_meal.quantity)
-
+    BasketMeal.create(meal: @meal, basket: @other_basket, quantity: @basket_meal.quantity, shared: :shared)
     redirect_to restaurant_meals_path(@meal.restaurant, table_id: @basket.table)
   end
 
