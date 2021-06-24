@@ -6,15 +6,12 @@
       <div class="header">
         <h1> Table #<%= @basket.table.number %></h1>
       </div>
-
-      <div class="basket-title">
-        <h4>Your Basket</h4>
-      </div>
       <div class="back" style="overflow: scroll">
-        <% @basket.basket_meals.each do |basket_meal| %>
-          <% if !basket_meal.shared? %>
-            <% @basket.basket_meals.each do |basket_meal| %>
-              <% @total_price += (basket_meal.meal.price * basket_meal.quantity)%>
+        <div class="basket-title">
+          <h4>Your Basket</h4>
+        </div>
+        <% @not_shared_basket_meals.each do |basket_meal| %>
+          <% @total_price += (basket_meal.meal.price * basket_meal.quantity)%>
               <div class="card-products">
                 <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
                 <div class="card-products-infos">
@@ -34,35 +31,32 @@
                   <% end %>
                 </div>
               </div>
-            <% end  %>
-          <% else %>
-            <div class='header'>
-              <h4>Shared Basket</h4>
-            </div>
-            <% @basket.basket_meals.each do |basket_meal| %>
-              <% @total_price += (basket_meal.meal.price * basket_meal.quantity)%>
-              <div class="card-products">
-                <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
-                <div class="card-products-infos">
-                  <h4> <%= "#{"%.0f" % (basket_meal.quantity)} "  %>x
-                    <%= basket_meal.meal.name %>
-                  </h4>
-                  <p><%= humanized_money_with_symbol(basket_meal.meal.price) %></p>
-                  <% if basket_meal.quantity > 1 %>
-                    <%= simple_form_for(basket_meal) do |f| %>
-                      <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
-                      <button type="submit" class='btn-minus' style="text-decoration: none; color:#fdf5ec;">
-                        -
-                      </button>
-                    <% end %>
-                  <% else %>
-                    <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
-                  <% end %>
-                </div>
-              </div>
-            <% end  %>
           <% end %>
-        <% end %>
+        <div class='header'>
+          <h4>Shared Basket</h4>
+        </div>
+        <% @shared_basket_meals.each do |basket_meal| %>
+          <% @total_price += (basket_meal.meal.price * basket_meal.quantity)%>
+              <div class="card-products">
+                <%= cl_image_tag basket_meal.meal.photo.key, class: "card-meal-img" %>
+                <div class="card-products-infos">
+                  <h4> <%= "#{"%.0f" % (basket_meal.quantity)} "  %>x
+                    <%= basket_meal.meal.name %>
+                  </h4>
+                  <p><%= humanized_money_with_symbol(basket_meal.meal.price) %></p>
+                  <% if basket_meal.quantity > 1 %>
+                    <%= simple_form_for(basket_meal) do |f| %>
+                      <%= f.input :quantity, as: :hidden, input_html: { value: basket_meal.quantity - 1} %>
+                      <button type="submit" class='btn-minus' style="text-decoration: none; color:#fdf5ec;">
+                        -
+                      </button>
+                    <% end %>
+                  <% else %>
+                    <button class='btn-minus'><%= link_to "-", basket_meal_path(basket_meal.id), method: :delete, style:"color:#fdf5ec"%></button>
+                  <% end %>
+                </div>
+              </div>
+          <% end %>
       </div>
     </div>
   </div>
