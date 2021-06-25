@@ -13,7 +13,7 @@ h1 {
 
 .all-btn-modal-share {
   color: #fdf5ec;
-  background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);;
+  background: linear-gradient(180.82deg, #9498EF 24.73%, rgba(179, 121, 224, 0.76) 99.29%);
   border: none;
   padding: 8px 40px;
   border-radius: 10px;
@@ -24,6 +24,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    color: #fdf5ec;
+  }
+
 }
 
 .dropdown{
