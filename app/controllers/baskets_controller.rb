@@ -28,39 +28,9 @@ class BasketsController < ApplicationController
 
   private
 
- def item_hash(basket_meal, basket_meal_quantity = nil)
-    {
-      name: basket_meal.meal.name,
-      images: [helpers.cl_image_path(basket_meal.meal.photo.key)],
-      amount: basket_meal.meal.price_cents,
-      currency: 'eur',
-      quantity: basket_meal_quantity ? basket_meal_quantity.to_i : basket_meal.quantity.to_i
-    }
-  end
-
   def stripe_session
     @items = @basket.basket_meals.map do |basket_meal|
-      if basket_meal.quantity != basket_meal.quantity.to_i        # if basket_meal.quantity is a float
-        # we re rounding it down
-        basket_meal_quantity = basket_meal.quantity.to_i
-        half_hash = {
-          name: " 1/2 #{basket_meal.meal.name}",
-          images: [helpers.cl_image_path(basket_meal.meal.photo.key)],
-          amount: basket_meal.meal.price_cents / 2,
-          currency: 'eur',
-          quantity: 1
-        }
-        if basket_meal_quantity.zero?
-          half_hash
-        else
-          # create exactly that hash below
-          whole_hash = item_hash(basket_meal, basket_meal_quantity)
-          # additionally, create a meal.name 1/2 with quantity = 1, amount = half 1 meal
-          [whole_hash, half_hash]
-        end
-      else
-        item_hash(basket_meal, basket_meal.quantity)
-      end
+      basket_meal.to_stripe_hash
     end.flatten
 
     Stripe::Checkout::Session.create(
@@ -74,6 +44,5 @@ class BasketsController < ApplicationController
   def basket_params
     params.require(:basket).permit(:status)
   end
+
 end
-
-
